@@ -1,16 +1,25 @@
 <script>
 import ProjectCard from './components/ProjectCard.vue';
+import AppHeader from './components/AppHeader.vue'
+
 
 export default{
   components : {
-    ProjectCard
+    ProjectCard,
+    AppHeader
   }
 
 }
 </script>
 
 <template>
-  <ProjectCard> </ProjectCard>
+  <header>
+    <AppHeader></AppHeader>
+  </header>
+  <main>
+    <ProjectCard> </ProjectCard>
+  </main>
+
 </template>
 
 <style>
