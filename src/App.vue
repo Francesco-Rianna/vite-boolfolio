@@ -1,11 +1,16 @@
 <script>
+import ProjectCard from './components/ProjectCard.vue';
+
 export default{
+  components : {
+    ProjectCard
+  }
 
 }
 </script>
 
 <template>
-  <h1>prova</h1>
+  <ProjectCard> </ProjectCard>
 </template>
 
 <style>
