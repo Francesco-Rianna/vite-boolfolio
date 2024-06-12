@@ -1,11 +1,11 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue';
+import ProjectList from './components/ProjectList.vue';
 import AppHeader from './components/AppHeader.vue'
 
 
 export default{
   components : {
-    ProjectCard,
+    ProjectList,
     AppHeader
   }
 
@@ -17,7 +17,7 @@ export default{
     <AppHeader></AppHeader>
   </header>
   <main>
-    <ProjectCard> </ProjectCard>
+    <ProjectList> </ProjectList>
   </main>
 
 </template>
