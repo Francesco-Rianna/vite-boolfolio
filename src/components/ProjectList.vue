@@ -1,7 +1,11 @@
 <script>
 import axios from 'axios';
+import SingleProject from './SingleProject.vue';
 export default {
     name :'ProjectList',
+    components: {
+        SingleProject
+    },
     data(){
          return{
           projects:[]
@@ -26,15 +30,7 @@ export default {
 
 <template>
     <div class="container d-flex flex-wrap gap-2">
-        <div v-for="project in projects" class="card mb-3" style="width: 14rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{project.name}}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{project.client_name}}</h6>
-                <p class="card-text">{{project.summary}}.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
+       <SingleProject v-for="project in projects" :projectData="project"></SingleProject>
     </div>
 </template>
 
