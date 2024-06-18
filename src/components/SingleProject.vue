@@ -17,18 +17,13 @@ export default {
                 <div v-else>
                     <div class="text-body-secondary"> Tecnologia utilizzata : nessuna</div>
                 </div>
-
                 <div>
                    <div > Tecnologia utilizzata :  <span v-for="technology in projectData.technologies"> {{ technology.name }},</span></div>
                 </div>
-                    
-
-
                 <p class="card-text">{{projectData.summary}}.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                </div>
             </div>
-        </div>
+
 
 </template>
 <style scoped>
