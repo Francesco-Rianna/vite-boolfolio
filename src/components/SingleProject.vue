@@ -3,6 +3,16 @@ export default {
     name:'SinglePost',
     props : {
         projectData : Object
+    },
+    methods : {
+        truncateText(text) {
+            if(text.length > 100) {
+                return text.substr(0, 99) + '...';
+            }
+
+            return text;
+        }
+
     }
 }
 </script>
@@ -20,7 +30,7 @@ export default {
                 <div>
                    <div > Tecnologia utilizzata :  <span v-for="technology in projectData.technologies"> {{ technology.name }},</span></div>
                 </div>
-                <p class="card-text">{{projectData.summary}}.</p>
+                <p class="card-text">{{truncateText(projectData.summary)}}.</p>
                 </div>
             </div>
 
